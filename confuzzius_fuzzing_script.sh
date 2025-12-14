@@ -19,10 +19,7 @@ python3 fuzzer/main.py \
   --max-individual-length $MAX_LEN \
   -t $T \
   --seed 1 \
-  --data-dependency 0 \
-  --constraint-solving 0 \
-  --environmental-instrumentation 0 \
-  -r $OUTDIR/1_assertion_failure.json \
+   -r $OUTDIR/1_assertion_failure.json \
 
 
 # 2) Block dependency : Driver
@@ -32,9 +29,6 @@ python3 fuzzer/main.py \
   --max-individual-length $MAX_LEN \
   -t $T \
   --seed 1 \
-  --data-dependency 0 \
-  --constraint-solving 0 \
-  --environmental-instrumentation 0 \
   -r $OUTDIR/2_block_dependency.json \
 
 # 3) Integer overflow : Driver
@@ -44,9 +38,6 @@ python3 fuzzer/main.py \
   --max-individual-length $MAX_LEN \
   -t $T \
   --seed 1 \
-  --data-dependency 0 \
-  --constraint-solving 0 \
-  --environmental-instrumentation 0 \
   -r $OUTDIR/3_integer_overflow.json \
 
 # 4) Leaking ether : Driver
@@ -56,9 +47,6 @@ python3 fuzzer/main.py \
   --max-individual-length $MAX_LEN \
   -t $T \
   --seed 1 \
-  --data-dependency 0 \
-  --constraint-solving 0 \
-  --environmental-instrumentation 0 \
   -r $OUTDIR/4_leaking_ether.json \
 
 # 5) Locking ether : Driver
@@ -68,9 +56,6 @@ python3 fuzzer/main.py \
   --max-individual-length $MAX_LEN \
   -t $T \
   --seed 1 \
-  --data-dependency 0 \
-  --constraint-solving 0 \
-  --environmental-instrumentation 0 \
   -r $OUTDIR/5_locking_ether.json \
 
 # 6) Reentrancy : Driver
@@ -80,10 +65,7 @@ python3 fuzzer/main.py \
   --max-individual-length $MAX_LEN \
   -t $T \
   --seed 1 \
-  --data-dependency 0 \
-  --constraint-solving 0 \
-  --environmental-instrumentation 0 \
-  -r $OUTDIR/6_reentrancy.json \
+   -r $OUTDIR/6_reentrancy.json \
 
 
 # 7) Transaction order dependency : Driver
@@ -93,10 +75,7 @@ python3 fuzzer/main.py \
   --max-individual-length $MAX_LEN \
   -t $T \
   --seed 1 \
-  --data-dependency 0 \
-  --constraint-solving 0 \
-  --environmental-instrumentation 0 \
-  -r $OUTDIR/7_transaction_order_dependency.json \
+   -r $OUTDIR/7_transaction_order_dependency.json \
 
 
 # 8) Unhandled exception : Driver
@@ -106,9 +85,6 @@ python3 fuzzer/main.py \
   --max-individual-length $MAX_LEN \
   -t $T \
   --seed 1 \
-  --data-dependency 0 \
-  --constraint-solving 0 \
-  --environmental-instrumentation 0 \
   -r $OUTDIR/8_unhandled_exception.json \
 
 
@@ -119,10 +95,7 @@ python3 fuzzer/main.py \
   --max-individual-length $MAX_LEN \
   -t $T \
   --seed 1 \
-  --data-dependency 0 \
-  --constraint-solving 0 \
-  --environmental-instrumentation 0 \
-  -r $OUTDIR/9_unprotected_selfdestruct.json \
+    -r $OUTDIR/9_unprotected_selfdestruct.json \
 
 
 # 10) Unsafe delegatecall : Driver
@@ -132,9 +105,6 @@ python3 fuzzer/main.py \
   --max-individual-length $MAX_LEN \
   -t $T \
   --seed 1 \
-  --data-dependency 0 \
-  --constraint-solving 0 \
-  --environmental-instrumentation 0 \
   -r $OUTDIR/10_unsafe_delegatecall.json \
 
 
