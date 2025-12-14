@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # ==============================
-# ConFuzzius fuzzing_script (10vuln)
+# ConFuzzius fuzzing_script
 # ==============================
 
 SOLC_VERSION="v0.4.26"
 EVM_VERSION="byzantium"
-MAX_LEN=5
-T=240
+MAX_LEN=10
+T=300
 OUTDIR="fuzzer/result2"
 
 mkdir -p $OUTDIR
@@ -18,6 +18,10 @@ python3 fuzzer/main.py \
   --solc $SOLC_VERSION --evm $EVM_VERSION \
   --max-individual-length $MAX_LEN \
   -t $T \
+  --seed 1 \
+  --data-dependency 0 \
+  --constraint-solving 0 \
+  --environmental-instrumentation 0 \
   -r $OUTDIR/1_assertion_failure.json \
 
 
@@ -27,6 +31,10 @@ python3 fuzzer/main.py \
   --solc $SOLC_VERSION --evm $EVM_VERSION \
   --max-individual-length $MAX_LEN \
   -t $T \
+  --seed 1 \
+  --data-dependency 0 \
+  --constraint-solving 0 \
+  --environmental-instrumentation 0 \
   -r $OUTDIR/2_block_dependency.json \
 
 # 3) Integer overflow : Driver
@@ -35,6 +43,10 @@ python3 fuzzer/main.py \
   --solc $SOLC_VERSION --evm $EVM_VERSION \
   --max-individual-length $MAX_LEN \
   -t $T \
+  --seed 1 \
+  --data-dependency 0 \
+  --constraint-solving 0 \
+  --environmental-instrumentation 0 \
   -r $OUTDIR/3_integer_overflow.json \
 
 # 4) Leaking ether : Driver
@@ -43,6 +55,10 @@ python3 fuzzer/main.py \
   --solc $SOLC_VERSION --evm $EVM_VERSION \
   --max-individual-length $MAX_LEN \
   -t $T \
+  --seed 1 \
+  --data-dependency 0 \
+  --constraint-solving 0 \
+  --environmental-instrumentation 0 \
   -r $OUTDIR/4_leaking_ether.json \
 
 # 5) Locking ether : Driver
@@ -51,6 +67,10 @@ python3 fuzzer/main.py \
   --solc $SOLC_VERSION --evm $EVM_VERSION \
   --max-individual-length $MAX_LEN \
   -t $T \
+  --seed 1 \
+  --data-dependency 0 \
+  --constraint-solving 0 \
+  --environmental-instrumentation 0 \
   -r $OUTDIR/5_locking_ether.json \
 
 # 6) Reentrancy : Driver
@@ -59,6 +79,10 @@ python3 fuzzer/main.py \
   --solc $SOLC_VERSION --evm $EVM_VERSION \
   --max-individual-length $MAX_LEN \
   -t $T \
+  --seed 1 \
+  --data-dependency 0 \
+  --constraint-solving 0 \
+  --environmental-instrumentation 0 \
   -r $OUTDIR/6_reentrancy.json \
 
 
@@ -68,6 +92,10 @@ python3 fuzzer/main.py \
   --solc $SOLC_VERSION --evm $EVM_VERSION \
   --max-individual-length $MAX_LEN \
   -t $T \
+  --seed 1 \
+  --data-dependency 0 \
+  --constraint-solving 0 \
+  --environmental-instrumentation 0 \
   -r $OUTDIR/7_transaction_order_dependency.json \
 
 
@@ -77,6 +105,10 @@ python3 fuzzer/main.py \
   --solc $SOLC_VERSION --evm $EVM_VERSION \
   --max-individual-length $MAX_LEN \
   -t $T \
+  --seed 1 \
+  --data-dependency 0 \
+  --constraint-solving 0 \
+  --environmental-instrumentation 0 \
   -r $OUTDIR/8_unhandled_exception.json \
 
 
@@ -86,6 +118,10 @@ python3 fuzzer/main.py \
   --solc $SOLC_VERSION --evm $EVM_VERSION \
   --max-individual-length $MAX_LEN \
   -t $T \
+  --seed 1 \
+  --data-dependency 0 \
+  --constraint-solving 0 \
+  --environmental-instrumentation 0 \
   -r $OUTDIR/9_unprotected_selfdestruct.json \
 
 
@@ -95,6 +131,10 @@ python3 fuzzer/main.py \
   --solc $SOLC_VERSION --evm $EVM_VERSION \
   --max-individual-length $MAX_LEN \
   -t $T \
+  --seed 1 \
+  --data-dependency 0 \
+  --constraint-solving 0 \
+  --environmental-instrumentation 0 \
   -r $OUTDIR/10_unsafe_delegatecall.json \
 
 

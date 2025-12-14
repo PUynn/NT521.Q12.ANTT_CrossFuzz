@@ -1,8 +1,8 @@
 #!/bin/bash
 
 SOLC_VERSION="0.4.26"
-N=5
-T=240
+N=10
+T=300
 SOLC_PATH="/home/pu/CrossFuzz/myenv/bin/solc"
 MODE="auto"
 DUPLICATION=0
